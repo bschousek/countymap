@@ -38,7 +38,9 @@ python generate_state_map.py --config wisconsin_config.json
 python generate_state_map.py --config your_state_config.json
 ```
 
-Replace `XX` with your state's FIPS code (see list below).
+Replace `your_state_config.json` with your state's configuration file.
+
+> **Tip**: You can find US state FIPS codes online (e.g., Wisconsin is 55, California is 06).
 
 ## Installation
 
@@ -142,16 +144,22 @@ Each PDF contains:
 
 ## Workflow for a New State
 
-1. **Generate initial map**:
+1. **Create a configuration file**:
    ```bash
-   python generate_state_map.py --state-fips 06 --state-name California
+   python state_config.py   # Generate a template, then edit it manually
+   ```
+   Or copy an existing state config and modify it with your state's FIPS code, name, and any custom settings.
+
+2. **Generate the map**:
+   ```bash
+   python generate_state_map.py --config your_state_config.json
    ```
 
-2. **Review the PDF** and note:
+3. **Review the PDF** and note:
    - Grid squares that are mostly outside the state (to exclude)
    - Grid labels that overlap county names (to adjust)
 
-3. **Create configuration file** and iterate until satisfied
+4. **Refine the configuration** and regenerate until satisfied
 
 ## Troubleshooting
 
