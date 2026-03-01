@@ -518,7 +518,22 @@ def main():
     print("=" * 80)
 
     # Load configuration (required)
-    config = state_config.StateConfig(config_file=args.config)
+    config_path = args.config
+    
+    # If config file doesn't exist in current dir, try config/ subdirectory
+    if not os.path.exists(config_path):
+        alt_path = os.path.join('config', os.path.basename(config_path))
+        if os.path.exists(alt_path):
+            config_path = alt_path
+            print(f"Found config file at: {config_path}")
+    
+    config = state_config.StateConfig(config_file=config_path)
+    
+    # Verify configuration was loaded
+    if not config.state_fips or not config.state_name:
+        print(f"ERROR: Config file not loaded properly or missing state_fips/state_name")
+        print(f"Config path tried: {config_path}")
+        sys.exit(1)
 
     # Allow --state-name to override config state name
     if args.state_name:

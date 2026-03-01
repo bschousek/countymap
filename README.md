@@ -114,6 +114,24 @@ You can now nudge individual county labels to avoid overlap with Maidenhead grid
 
 Positive `x_offset` moves the label east, positive `y_offset` moves it north. These values are applied when drawing county labels on the map.
 
+### Why tweak the configuration?
+
+The default map generated from a bare configuration often needs manual refinement to look its best. Overlapping grid labels, crowded counties, or stray grid squares that lie mostly outside the state can make the map hard to read.
+
+Below is a comparison of the same state produced with and without tweaks (both files are in the repository root):
+
+![Bare map](bare_wisconsin_county_map.png) ![Tweaked map](wisconsin_county_map.png)
+
+*Left: generated from a blank config; right: after excluding several grid squares and nudging labels.*
+
+Common reasons to adjust the configuration:
+
+- **Remove extraneous grid squares** that only touch a small corner of the state.
+- **Shift grid labels** so they don’t collide with county names.
+- **Move county names** slightly when they crowd a grid label or another county.
+
+Tweaking early in the workflow makes the final PDF much cleaner and more usable.
+
 ## Command-Line Options
 
 Only a configuration file is required; the state name may be overridden on the command line.

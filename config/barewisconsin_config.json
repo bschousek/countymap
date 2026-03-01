@@ -1,0 +1,14 @@
+{
+  "state_name": "Wisconsin",
+  "state_fips": "55",
+  "shapefile": "shapefile/tl_2023_us_county.shp",
+  "lakes": "shapefile/ne_10m_lakes.shp",
+  "abbreviations": "config/wisconsin_abbreviations.csv",
+  "output": "output/wisconsin_counties.pdf",
+  "no_lakes": false,
+  "exclude_grids": [],
+  "label_adjustments": {},
+  "county_label_adjustments": {},
+  "county_display_names": {},
+  "custom_abbreviations": {}
+}
