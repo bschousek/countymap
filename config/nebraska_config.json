@@ -1,0 +1,31 @@
+{
+  "state_name": "Nebraska",
+  "state_fips": "31",
+  "shapefile": "shapefile/tl_2023_us_county.shp",
+  "lakes": "shapefile/ne_10m_lakes.shp",
+  "abbreviations": "config/nebraska_abbreviations.csv",
+  "output": "output/nebraska_counties.pdf",
+  "no_lakes": false,
+  "label_adjustments": {
+    "# Grid square code": {
+      "x_offset": 0,
+      "y_offset": 0,
+      "# comment": "Positive x = east, positive y = north, units in meters"
+    }
+  },
+  "county_display_names": {
+    "# County Name": "Display Name",
+    "# Example": "St. Croix"
+  },
+  "county_label_adjustments": {
+    "# County Name": {
+      "x_offset": 0,
+      "y_offset": 0,
+      "# comment": "Positive x = east, positive y = north, units in meters"
+    }
+  },
+  "custom_abbreviations": {
+    "# County Name or semicolon-separated list of alternate spellings": "ABR",
+    "# Example": "St. Croix;St Croix;Saint Croix: STC"
+  }
+}

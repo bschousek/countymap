@@ -1,0 +1,38 @@
+{
+  "state_name": "Wisconsin",
+  "state_fips": "55",
+  "shapefile": "shapefile/tl_2023_us_county.shp",
+  "lakes": "shapefile/ne_10m_lakes.shp",
+  "abbreviations": "config/wisconsin_abbreviations.csv",
+  "output": "output/wisconsin_counties.pdf",
+  "no_lakes": false,
+  "exclude_grids": [
+    "EN32",
+    "EN33",
+    "EN37",
+    "EN47",
+    "EN57",
+    "EN67"
+  ],
+  "label_adjustments": {
+    "EN45": {
+      "x_offset": 25000,
+      "y_offset": 0
+    },
+    "EN54": {
+      "x_offset": 0,
+      "y_offset": 20000
+    }
+  },
+  "county_label_adjustments": {
+    "Marquette": { "x_offset": 0, "y_offset": 12000 },
+    "Green Lake": { "x_offset": 0, "y_offset": -12000 },
+    "Ashland": { "x_offset": -10000, "y_offset": -70000 }
+  },
+  "county_display_names": {
+    "# Example": "St. Croix"
+  },
+  "custom_abbreviations": {
+    "St. Croix;St Croix;Saint Croix": "STC"
+  }
+}

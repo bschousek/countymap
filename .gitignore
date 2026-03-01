@@ -1,0 +1,14 @@
+venv/
+__pycache__/
+*.pyc
+*.pdf
+county_map.png
+shapefile/*.shp
+shapefile/*.dbf
+shapefile/*.shx
+shapefile/*.prj
+shapefile/*.cpg
+.DS_Store
+.vscode/
+Thumbs.db
+*.log
